@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <div class="container">
-    <div class="row">
+    <div class="row col-md-8 col-md-offset-2">
         <?php if (isset($error)) : ?>
             <div class="col-md-12">
                 <div class="alert alert-danger" role="alert">
