@@ -5,6 +5,7 @@ class User_model extends CI_Model {
     public function __construct(){
         parent::__construct();
         $this->load->database();
+		$this->load->helper('string');
     }
 
     public function resolve_user_login($email, $password) {
@@ -161,7 +162,7 @@ class User_model extends CI_Model {
         $message .= "Thanks for registering with us<br><br>";
 
         $hash_value = array(
-            'hash' => random_string(alnum, 8),
+            'hash' => random_string('alnum', 8),
         );
         $hash = md5("Csk#cOnfirm1" . $user->email . $hash_value['hash']);
 
